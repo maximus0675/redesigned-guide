@@ -8,7 +8,7 @@ st.set_page_config(page_title="Live PLC Dashboard", layout="wide")
 st.title("⚡ Live Factory Dashboard")
 
 # 2. Connect to Database (Supabase)
-# We use st.secrets for security (explained in Step 3)
+# We use st.secrets for security 
 # For local testing, replace st.secrets[...] with your actual string 'postgresql://...'
 db_url = st.secrets["DB_URL"] 
 engine = create_engine(db_url)
@@ -44,4 +44,5 @@ while True:
         st.dataframe(df)
         
     # Wait 2 seconds before refreshing (Simulates "Live" view)
+
     time.sleep(2)
